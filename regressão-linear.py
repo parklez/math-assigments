@@ -11,6 +11,11 @@
 --------------------------------------------------------------------------------
 source code @ github.com/parklez
 """
+# TODO: code something that allows the user to return in case they miswrite a value
+# TO FIX: crash when no values or strings are input
+# TODO: allow the use to calculate something with the final fomrula
+# ??? Some computers can't run this code with auto-py-to-exe https://github.com/brentvollebregt/auto-py-to-exe
+
 import os
 import math
 
@@ -29,8 +34,8 @@ def main():
     print('-----')
     
     for pair in range(0, n):
-        x = int(input("{}° X: ".format(pair+1)))
-        y = int(input("{}° Y: ".format(pair+1)))
+        x = float(input("{}° X: ".format(pair+1)))
+        y = float(input("{}° Y: ".format(pair+1)))
         xy.append([x, y])
         print('-----')
     

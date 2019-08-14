@@ -13,8 +13,8 @@ source code @ github.com/parklez
 """
 # TODO: code something that allows the user to return in case they miswrite a value
 # TO FIX: crash when no values or strings are input
-# TODO: allow the use to calculate something with the final fomrula
-# ??? Some computers can't run this code with auto-py-to-exe https://github.com/brentvollebregt/auto-py-to-exe
+# TODO: create a function that allows the user to calculate something with the final fomrula
+# BUG: Some computers can't run this code with auto-py-to-exe https://github.com/brentvollebregt/auto-py-to-exe
 
 import os
 import math

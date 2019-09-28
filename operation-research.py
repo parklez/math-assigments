@@ -68,7 +68,7 @@ def check_for_valid_input(value):
     return False
 
 def input_variables(problem:Problem):
-    os.system("clear")
+    os.system("cls")
 
     user = "this is something"
 
@@ -102,7 +102,7 @@ def input_variables(problem:Problem):
             print("[ERRO] Input não válido como número!")
 
 def input_constraints(problem:Problem):
-    os.system("clear")
+    os.system("cls")
 
     if not problem.function:
         print("[ERRO] Função vazia!")
@@ -115,9 +115,10 @@ def input_constraints(problem:Problem):
     print("-------------------------------")
     print("Digite as sujeições à função objetiva,")
     print("uma variável por vez.")
-    print("-------------------------------")
+    print("")
     print("Função objetiva:")
     print(problem.function_to_string())
+    print("-------------------------------")
     print("Deixe o campo vazio para cancelar/concluir!")
 
     i = 0
@@ -142,10 +143,11 @@ def input_constraints(problem:Problem):
                 cancel = 1
                 if i == 0:
                     print("Concluído!")
-                    break
                 else:
                     print("Cancelado!")
-                    break
+                input("Aperte [ENTER] para continuar.")
+                break
+
             else:
                 print("[ERRO] Input não válido como número!")
         # <= a value
@@ -159,6 +161,7 @@ def input_constraints(problem:Problem):
             elif user == "":
                 print("Cancelado!")
                 cancel = 1
+                input("Aperte [ENTER] para continuar.")
                 break
 
             else:
@@ -174,9 +177,10 @@ def print_guided_problem_menu(problem:Problem):
     and allow them to add constraints that will then be passed to another function."""
 
     if problem.function:
-        os.system("clear")
+        os.system("cls")
         print("Já existe uma função objetiva,")
         print("deseja criar uma nova?")
+        print("(Isso apagará todos os dados anteriores.)")
         print("-------------------------------")
         print("1. Sim")
         print("2. Não")
@@ -193,7 +197,7 @@ def print_guided_problem_menu(problem:Problem):
             input("Aperte [ENTER] para retornar.")
             return
 
-    os.system("clear")
+    os.system("cls")
     print("Criar novo problema")
     print("-------------------------------")
     print("Digite um nome para o problema")
@@ -207,7 +211,8 @@ def print_guided_problem_menu(problem:Problem):
         return
 
     problem.name = nome
-    os.system("clear")
+
+    os.system("cls")
     print("Tipo de problema")
     print("-------------------------------")
     print("1. Maximizar")
@@ -226,7 +231,7 @@ def print_guided_problem_menu(problem:Problem):
     input_constraints(problem)
 
 def print_modelo_padrao(problem:Problem):
-    os.system("clear")
+    os.system("cls")
 
     if not problem.function:
         print("Não há função objetiva.")
@@ -244,7 +249,7 @@ def print_modelo_padrao(problem:Problem):
     input("Aperte [ENTER] para retornar ao menu principal.")
 
 def remove_constraint_menu(problem:Problem):
-    os.system("clear")
+    os.system("cls")
     if not problem.constraints:
         print("Não há restrições para remover.")
         input("Aperte [ENTER] para retornar.")
@@ -280,7 +285,7 @@ def edit_constraints(problem:Problem):
     
     running = 1
     while running:
-        os.system("clear")
+        os.system("cls")
         print("Editar restrições")
         print("-------------------------------")
         print("1. Remover existentes")
@@ -303,7 +308,7 @@ def edit_constraints(problem:Problem):
             input("Aperte [ENTER] para continuar.")
 
 def edit_function(problem:Problem):
-    os.system("clear")
+    os.system("cls")
     i = 0
 
     print("Editar função objetiva")
@@ -337,7 +342,7 @@ def edit_function(problem:Problem):
     input("Aperte [ENTER] para retornar.")
 
 def edit_problem(problem:Problem):
-    os.system("clear")
+    os.system("cls")
 
     if not problem.function:
         print("[ERRO] Não existe função objetiva.")
@@ -346,7 +351,7 @@ def edit_problem(problem:Problem):
 
     running = 1
     while running:
-        os.system("clear")
+        os.system("cls")
         print("Editar problema")
         print("-------------------------------")
         print("1. Editar função")    
@@ -366,7 +371,7 @@ def edit_problem(problem:Problem):
             return
 
 def print_copyright():
-    os.system("clear")
+    os.system("cls")
     print("Copyright")
     print("-------------------------------")
     print("parklez @ github.com/parklez")
@@ -376,7 +381,7 @@ def print_copyright():
 def print_main_menu():
     running = 1
     while running:
-        os.system("clear")
+        os.system("cls")
         print("Pesquisa Operacional")
         print("-------------------------------")
         print("1. Criar novo problema")

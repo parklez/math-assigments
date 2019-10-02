@@ -2,6 +2,8 @@
 #https://pythonhosted.org/PuLP/CaseStudies/a_blending_problem.html
 import os
 
+os.system("color 70")
+os.system('mode con: cols=70 lines=20')
 
 class Problem:
     def __init__(self):
@@ -74,15 +76,15 @@ def input_variables(problem:Problem):
 
     print("Função objetivo")
     print("-------------------------------")
-    print("Digite os coeficientes de cada")
-    print("variável, uma de cada vez.")
+    print("Digite os o lucro de cada")
+    print("produto, um de cada vez.")
     print("-------------------------------")
     print("Deixe o campo vazio para concluir!")
 
     i = 1
 
     while user != "":
-        user = input("X{}: ".format(i))
+        user = input("{}º: ".format(i))
 
         if user == "":
             if problem.function:
